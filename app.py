@@ -43,12 +43,10 @@ def output():
         
         #predictions
         result = model.predict([[p,g,b,s,i,bmi,db,age]])
+        
+        prediction = 'Output'
 
-        #output
-        if result[0] == 1:
-            prediction = 'Patient Suffers from Diabetes'
-        else:
-            prediction = 'Patient Is Normal'
+
 
         return render_template("output.html",prediction=prediction)
     
